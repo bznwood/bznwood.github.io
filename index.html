@@ -52,7 +52,8 @@
       font-family: system-ui, sans-serif; font-weight: 600; text-decoration: none;
     }
     .button.secondary { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 12px 0 4px; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0 4px; }
+    @media (max-width: 480px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
     .gallery:empty { display: none; }
     .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; display: block; }
     footer { color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; padding-bottom: 40px; }
@@ -83,15 +84,15 @@
 
     <section class="card">
       <h2>Gallery</h2>
-      <p>A few pieces from our members.</p>
+      <p>Scenes from our meetings and members&rsquo; work.</p>
       <!-- To show photos here, add them to the images/ folder with these names. Missing ones are hidden. -->
       <div class="gallery">
-        <img src="images/gallery-1.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
-        <img src="images/gallery-2.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
-        <img src="images/gallery-3.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
-        <img src="images/gallery-4.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
-        <img src="images/gallery-5.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
-        <img src="images/gallery-6.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-1.jpg" alt="A guild member holding a hand-turned wooden bowl" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-2.jpg" alt="A finished turned wooden bowl on a workbench" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-3.jpg" alt="A handmade wooden sailboat shown at a guild meeting" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-4.jpg" alt="A large wooden table in a member's workshop" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-5.jpg" alt="Guild members gathered for a monthly shop meeting" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-6.jpg" alt="A box of vintage wooden hand planes" loading="lazy" onerror="this.remove()">
       </div>
       <div class="buttons">
         <a class="button secondary" href="https://photos.google.com/share/AF1QipNEW189WivxcEu6VCG1l_iy2GXyBpgX3dB8y_pNS7Fq4eY293XZbrSsHNzvGnUKsg?key=NzRtWUxsNy0yd2ZHZEs3OUd0VGY3YzZ0R19RYjFR">View the full gallery</a>
