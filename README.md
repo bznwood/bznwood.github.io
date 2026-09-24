@@ -2,7 +2,7 @@
 
 Static site for the Bozeman Woodworkers Guild, published with GitHub Pages.
 
-- Live site: https://bznwood.github.io/bzn-wood/
+- Live site: https://bznwood.github.io/
 - Edit `index.html` and push; GitHub Pages redeploys automatically.
 
 ## Publishing (one-time setup)
