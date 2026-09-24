@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bozeman Woodworkers Guild</title>
-  <meta name="description" content="The Bozeman Woodworkers Guild — a community of woodworkers in Bozeman, Montana.">
+  <meta name="description" content="The Bozeman Woodworkers Guild — a community of woodworkers in Bozeman, Montana. Meetings the first Thursday of each month.">
   <style>
     :root {
       --bg: #faf6ef;
       --text: #2b2118;
       --muted: #6b5a48;
       --accent: #8a4b1f;
+      --accent-text: #ffffff;
       --card: #ffffff;
       --border: #e6dccd;
     }
@@ -20,6 +21,7 @@
         --text: #f1e8dc;
         --muted: #b9a68f;
         --accent: #e0a36a;
+        --accent-text: #1c1712;
         --card: #261f18;
         --border: #3a3027;
       }
@@ -32,6 +34,7 @@
       color: var(--text);
       line-height: 1.6;
     }
+    a { color: var(--accent); }
     header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
     header { padding-top: 64px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
     .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-family: system-ui, sans-serif; }
@@ -40,7 +43,18 @@
     main { padding-top: 32px; padding-bottom: 48px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; }
     .card h2 { margin-top: 0; font-size: 1.3rem; }
-    .notice { font-family: system-ui, sans-serif; font-size: .9rem; border-left: 4px solid var(--accent); }
+    .meeting-when { font-size: 1.2rem; margin: 0 0 .25em; }
+    .next { color: var(--muted); font-family: system-ui, sans-serif; font-size: .95rem; margin: 0; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+    .button {
+      display: inline-block; padding: 10px 18px; border-radius: 8px;
+      background: var(--accent); color: var(--accent-text);
+      font-family: system-ui, sans-serif; font-weight: 600; text-decoration: none;
+    }
+    .button.secondary { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 12px 0 4px; }
+    .gallery:empty { display: none; }
+    .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; display: block; }
     footer { color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; padding-bottom: 40px; }
   </style>
 </head>
@@ -51,21 +65,64 @@
     <p class="lede">A community of makers sharing skills, tools, and a love of working with wood.</p>
   </header>
   <main>
-    <div class="card notice">
-      <strong>Test page.</strong> This site is under construction — if you can read this, GitHub Pages is working.
-    </div>
-    <div class="card">
+    <section class="card">
+      <h2>Meetings</h2>
+      <p class="meeting-when">The guild meets on the <strong>first Thursday of each month</strong>.</p>
+      <p class="next" id="next-meeting"></p>
+      <p>New members and visitors are always welcome. Join the WhatsApp community for meeting details and updates.</p>
+    </section>
+
+    <section class="card">
+      <h2>Join the Community</h2>
+      <p>Chat with fellow woodworkers, ask questions, and hear about meetings and events.</p>
+      <div class="buttons">
+        <a class="button" href="https://chat.whatsapp.com/JHDYiqr7fqDDvyPlvFn4yq">Join us on WhatsApp</a>
+        <a class="button secondary" href="https://www.instagram.com/bozemanwoodworkersguild/">Follow on Instagram</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Gallery</h2>
+      <p>A few pieces from our members.</p>
+      <!-- To show photos here, add them to the images/ folder with these names. Missing ones are hidden. -->
+      <div class="gallery">
+        <img src="images/gallery-1.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-2.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-3.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-4.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-5.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+        <img src="images/gallery-6.jpg" alt="Woodworking by a guild member" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="buttons">
+        <a class="button secondary" href="https://photos.google.com/share/AF1QipNEW189WivxcEu6VCG1l_iy2GXyBpgX3dB8y_pNS7Fq4eY293XZbrSsHNzvGnUKsg?key=NzRtWUxsNy0yd2ZHZEs3OUd0VGY3YzZ0R19RYjFR">View the full gallery</a>
+      </div>
+    </section>
+
+    <section class="card">
       <h2>About the Guild</h2>
       <p>Woodworkers of every experience level, from first-time whittlers to professional furniture makers, meeting to learn from each other.</p>
-    </div>
-    <div class="card">
-      <h2>Meetings &amp; Events</h2>
-      <p>Meeting schedule coming soon.</p>
-    </div>
+    </section>
   </main>
   <footer>
-    &copy; <span id="y">2026</span> Bozeman Woodworkers Guild
+    &copy; <span id="y">2026</span> Bozeman Woodworkers Guild ·
+    <a href="https://www.instagram.com/bozemanwoodworkersguild/">Instagram</a> ·
+    <a href="https://chat.whatsapp.com/JHDYiqr7fqDDvyPlvFn4yq">WhatsApp</a>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Show the date of the next meeting (first Thursday of the month).
+    function firstThursday(year, month) {
+      var d = new Date(year, month, 1);
+      d.setDate(1 + (4 - d.getDay() + 7) % 7);
+      return d;
+    }
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var next = firstThursday(today.getFullYear(), today.getMonth());
+    if (next < today) next = firstThursday(today.getFullYear(), today.getMonth() + 1);
+    document.getElementById('next-meeting').textContent =
+      'Next meeting: ' + next.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+  </script>
 </body>
 </html>
